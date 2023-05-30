@@ -74,13 +74,26 @@
 
 ### Prerequisites
 
+A browser that supports HTML5 and CSS3
+
+### Setup
+
+Clone this repository to your desired folder:
+
+Example commands:
+
+```sh
+  cd my-folder
+  git clone git@github.com:cuauh-cabrera/my-portfolio.git
+```
+
 ### Install
+
+Install the project on your local mahcine using any code editor.
 
 ### Usage
 
-### Run tests
-
-### Deployment
+Open the project using a code editor and deploy the project on your local computer via Live server.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
