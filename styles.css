@@ -221,3 +221,118 @@ ol a {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 1);
 }
+
+/* About me section */
+.about {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__headline {
+  width: 100%;
+  height: 55vh;
+  background-image: url(./assets/back_about_mobile.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+.about__headline--title {
+  margin-top: 65px;
+  font-style: normal;
+  font-size: 2.5em;
+  line-height: 52px;
+  text-align: center;
+  font-weight: 700;
+  color: rgba(23, 43, 77, 1);
+}
+
+.about__headline--text {
+  width: 70%;
+  margin-top: 25px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(66, 82, 110, 1);
+}
+
+.about__headline button {
+  margin-top: 40px;
+  width: 153px;
+}
+
+.about__card-container {
+  margin-top: 40px;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.about__card {
+  border: solid 1px rgba(193, 199, 208, 1);
+  border-radius: 8px;
+  background-color: rgba(235, 240, 238, 1);
+  margin-top: 10px;
+  width: 90%;
+  height: 47vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__card--icon {
+  margin-top: 40px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__card--title {
+  margin-top: 28px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(52, 69, 99, 1);
+}
+
+.about__card--tags {
+  width: 90%;
+  margin-top: 24px;
+}
+
+.about__card--tags ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about__card--tags ul li {
+  width: auto;
+  height: 40px;
+  padding: 12px;
+  margin: 3px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.75em;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: rgba(54, 179, 126, 1);
+}
