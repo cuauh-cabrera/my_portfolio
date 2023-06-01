@@ -138,9 +138,8 @@ ol a {
 .projects-container {
   width: 95%;
   margin-top: 38px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
 }
 
 .projects__card {
@@ -222,6 +221,17 @@ ol a {
   color: rgba(255, 255, 255, 1);
 }
 
+.action-btn:hover {
+  background-color: rgba(54, 179, 127, 1);
+  box-shadow: 0 12px 16px rgba(54, 179, 127, 0.24);
+  border-radius: 4px;
+}
+
+.action-btn:active {
+  background-color: rgba(0, 133, 82, 1);
+  box-shadow: 0 0 0 0;
+}
+
 /* About me section */
 .about {
   width: 100%;
@@ -233,7 +243,7 @@ ol a {
 
 .about__headline {
   width: 100%;
-  height: 55vh;
+  height: 60vh;
   background-image: url(./assets/back_about_mobile.png);
   background-repeat: no-repeat;
   background-position: bottom;
@@ -272,18 +282,24 @@ ol a {
 }
 
 .about__card-container {
-  margin-top: 40px;
+  margin-top: 10px;
   width: 100%;
   display: grid;
   justify-items: center;
 }
 
 .about__card {
+  width: 90%;
+  height: auto;
+  margin-top: 15px;
+}
+
+.about__card--item {
   border: solid 1px rgba(193, 199, 208, 1);
   border-radius: 8px;
   background-color: rgba(235, 240, 238, 1);
-  margin-top: 10px;
-  width: 90%;
+  margin-top: 0;
+  width: 100%;
   height: 47vh;
   display: flex;
   flex-direction: column;
