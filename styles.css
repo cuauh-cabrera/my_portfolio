@@ -429,10 +429,16 @@ ol a {
   color: rgba(66, 82, 110, 1);
 }
 
+.contact__container--btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .contact__container li button {
   border-radius: 4px;
-  margin-left: 30%;
-  margin-top: 24px;
+  margin: 0 auto;
 }
 
 .contact__mail {
