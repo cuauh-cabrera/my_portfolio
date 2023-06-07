@@ -28,7 +28,7 @@
             <p class="headline__text"> I can help you build a product , feature or website. Look through some of my work
                 and experience! If you like what you see and have a project you need coded,
                 don’t hesitate to contact me. </p>
-            <div class="headline__icons">
+            <div class="social-icons">
                 <ul>
                     <li><a href="https://twitter.com/cuau_cabrera"><img src="./assets/twitter.png"
                                 alt="This is a Twitter icon. Click on it to visit my Twitter profile"
@@ -222,7 +222,50 @@
                 </li>
             </ul>
         </section>
+        <!--Contact form-->
+        <section class="contact">
+            <h2 class="contact__headline">I'm always interested in hearing about new projects, so if you'd like to chat
+                please get in touch.</h2>
+            <form class="contact__container" action="https://formspree.io/f/mbjezwnw" method="POST">
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" name="user_name" id="name" placeholder="Full name" required maxlength="30">
+                    </li>
+                    <li>
+                        <label for="email">Email:</label>
+                        <input type="email" name="user_email" id="email" placeholder="Email address" required>
+                    </li>
+                    <li>
+                        <label for="message">Message:</label>
+                        <textarea name="user_message" id="message" cols="30" rows="10" maxlength="500"
+                            placeholder="Hey I'd like to connect to..." required></textarea>
+                    </li>
+                    <li class="contact__container--btn">
+                        <button class="action-btn">Get in touch</button>
+                    </li>
+                </ul>
+            </form>
+            <h3 class="contact__mail">cabrera.cuau@gmail.com</h3>
+        </section>
     </main>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="social-icons">
+            <ul>
+                <li><a href="https://twitter.com/cuau_cabrera"><img src="./assets/twitter.png"
+                            alt="This is a Twitter icon. Click on it to visit my Twitter profile"></a></li>
+                <li><a href="https://linkedin.com/in/cuaucabrera"><img src="./assets/Linkedin icon.png"
+                            alt="This is a Linkedin icon. Click on it to visit my Linkedin profile"></a></li>
+                <li><a href="https://medium.com"><img src="./assets/medium.png"
+                            alt="This is a medium icon. Click on it to visit my medium profile"></a></li>
+                <li><a href="https://github.com/cuauh-cabrera"><img src="./assets/github.png"
+                            alt="This is a github icon. Click on it to visit my github profile"></a></li>
+                <li><a href="https://www.angellist.com"><img src="./assets/angellist.png"
+                            alt="This is an angellist icon. Click on it to visit my angellist profile"></a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>
