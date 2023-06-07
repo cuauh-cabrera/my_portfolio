@@ -13,47 +13,50 @@
 </head>
 
 <body>
-    <header class="header">
-        <img src="./assets/Toolbar - Dark - Compact.png" alt="">
-        <nav class="header__nav">
-            <ul>
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
-    </header>
-    <div class="headline-container">
-        <!-- Hero headline -->
-        <section class="headline">
-            <h1 class="headline__title"><span class="headline__title--black">Hey there. <br>I'm Cuau. <br><span
-                        class="headline__title--green">I'm a
-                        software developer</span></span></h1>
-            <p class="headline__text"> I can help you build a product , feature or website. Look through some of my work
-                and experience! If you like what you see and have a project you need coded,
-                don’t hesitate to contact me. </p>
-            <div class="social-icons">
+    <div class="hero-container">
+        <header class="header">
+            <img src="./assets/Toolbar - Dark - Compact.png" alt="">
+            <nav class="header__nav">
                 <ul>
-                    <li><a href="https://twitter.com/cuau_cabrera"><img src="./assets/twitter.png"
-                                alt="This is a Twitter icon. Click on it to visit my Twitter profile"
-                                class="headline__icons--twitter"></a></li>
-                    <li><a href="https://linkedin.com/in/cuaucabrera"><img src="./assets/Linkedin icon.png"
-                                alt="This is a Linkedin icon. Click on it to visit my Linkedin profile"
-                                class="headline__icons--linkedin"></a></li>
-                    <li><a href="https://medium.com"><img src="./assets/medium.png"
-                                alt="This is a medium icon. Click on it to visit my medium profile"
-                                class="headline__icons--medium"></a></li>
-                    <li><a href="https://github.com/cuauh-cabrera"><img src="./assets/github.png"
-                                alt="This is a github icon. Click on it to visit my github profile"></a></li>
-                    <li><a href="https://www.angellist.com"><img src="./assets/angellist.png"
-                                alt="This is an angellist icon. Click on it to visit my angellist profile"
-                                class="headline__icons--angellist"></a></li>
+                    <li>Portfolio</li>
+                    <li>About</li>
+                    <li>Contact</li>
                 </ul>
-            </div>
-            <div class="headline__action">
-                <img src="./assets/Action.png" alt="Click on this icon to move to the next section">
-            </div>
-        </section>
+            </nav>
+        </header>
+        <div class="headline-container">
+            <!-- Hero headline -->
+            <section class="headline">
+                <h1 class="headline__title"><span class="headline__title--black">Hey there. <br>I'm Cuau. <br><span
+                            class="headline__title--green">I'm a
+                            software developer</span></span></h1>
+                <p class="headline__text"> I can help you build a product , feature or website. Look through some of my
+                    work
+                    and experience! If you like what you see and have a project you need coded,
+                    don’t hesitate to contact me. </p>
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="https://twitter.com/cuau_cabrera"><img src="./assets/twitter.png"
+                                    alt="This is a Twitter icon. Click on it to visit my Twitter profile"
+                                    class="headline__icons--twitter"></a></li>
+                        <li><a href="https://linkedin.com/in/cuaucabrera"><img src="./assets/Linkedin icon.png"
+                                    alt="This is a Linkedin icon. Click on it to visit my Linkedin profile"
+                                    class="headline__icons--linkedin"></a></li>
+                        <li><a href="https://medium.com"><img src="./assets/medium.png"
+                                    alt="This is a medium icon. Click on it to visit my medium profile"
+                                    class="headline__icons--medium"></a></li>
+                        <li><a href="https://github.com/cuauh-cabrera"><img src="./assets/github.png"
+                                    alt="This is a github icon. Click on it to visit my github profile"></a></li>
+                        <li><a href="https://www.angellist.com"><img src="./assets/angellist.png"
+                                    alt="This is an angellist icon. Click on it to visit my angellist profile"
+                                    class="headline__icons--angellist"></a></li>
+                    </ul>
+                </div>
+                <div class="headline__action">
+                    <img src="./assets/Action.png" alt="Click on this icon to move to the next section">
+                </div>
+            </section>
+        </div>
     </div>
     <main>
         <!--Projects section-->
@@ -169,7 +172,7 @@
                 <li class="about__card">
                     <article class="about__card--item">
                         <div class="about__card--icon">
-                            <img src="./assets/languages_icon.png" alt="">
+                            <img id="lang-icon" src="./assets/languages_icon.png" alt="">
                         </div>
                         <div class="about__card--title">
                             <h3>Languages</h3>

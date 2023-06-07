@@ -34,17 +34,24 @@ ol a {
   display: flex;
   flex-direction: row;
   position: fixed;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.98);
 }
 
-.header  img {
+.header img {
   width: 80%;
   height: 55px;
-  margin-left: 65px;
+  margin-right: 10px;
+  order: 2;
 }
 
 .header__nav {
-  display: none;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  order: 1;
+  visibility: hidden;
 }
 
 /* Headline styles */
@@ -475,11 +482,11 @@ ol a {
 
   .header img {
     width: 70%;
-    margin-left: 91px;
+    margin-right: 20px;
   }
 
-  .header nav {
-    display: none;
+  .header__nav {
+    width: 20%;
   }
 
   .headline-container {
@@ -566,31 +573,24 @@ ol a {
 }
 
 /* 600 px */
-@media(min-width: 600px) {
+@media (min-width: 600px) {
   .header {
     width: 100%;
     height: auto;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .header img {
-    width: 70%;
+    width: 60%;
     height: 7.9vh;
-    margin-left: 90px;
-    
+    margin-left: 30px;
   }
-
-  .header nav {
-    display: none;
-  }
-
-  
 
   .headline-container {
     width: 100%;
     height: 99vh;
-    margin-top: 0px;
-    background-size:70%;
+    margin-top: 0;
+    background-size: 70%;
   }
 
   .headline {
@@ -681,3 +681,195 @@ ol a {
   }
 }
 
+/* 768 px */
+@media (min-width: 768px) {
+  .hero-container {
+    background-image: url(./assets/Header-llustration-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    background-attachment: scroll;
+  }
+
+  .header {
+    background-color: rgba(255, 255, 255, 0);
+    width: 65%;
+    height: 5vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+  }
+
+  .header img {
+    display: none;
+  }
+
+  .header__nav {
+    width: 100%;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .header__nav ul {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .header__nav ul li {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 20px;
+    color: #344563;
+  }
+
+  .headline-container {
+    background-image: none;
+    height: 75vh;
+  }
+
+  .headline__title {
+    width: 50%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headline__title--black {
+    width: 100%;
+  }
+
+  .headline__title br {
+    display: none;
+  }
+
+  .headline__text {
+    width: 65%;
+    margin-top: 15px;
+  }
+
+  .social-icons ul {
+    width: 30vw;
+    margin-top: 50px;
+  }
+
+  .projects {
+    margin-top: 10px;
+  }
+
+  .projects__indicator {
+    display: none;
+  }
+
+  .projects-container {
+    width: 95%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    column-gap: 10px;
+  }
+
+  .projects__card {
+    width: 100%;
+  }
+
+  .about__headline {
+    width: 95%;
+    height: 50vh;
+    background-image: url(./assets/about_bkg_desktop.png);
+    background-size: contain;
+    background-position: center;
+    overflow-y: hidden;
+  }
+
+  .about__headline--text {
+    width: 67%;
+  }
+
+  .about__card-container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about__card {
+    width: 32%;
+  }
+
+  .about__card--item {
+    width: 100%;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .about__card--icon img {
+    width: 15vw;
+    margin-top: 10px;
+  }
+
+  #lang-icon {
+    width: 38vw;
+    height: 16vh;
+    margin-top: -4px;
+  }
+
+  .about__card--title {
+    font-size: 0.99em;
+  }
+
+  .about__card--tags {
+    width: 100%;
+  }
+
+  .about__card--tags ul {
+    width: 100%;
+  }
+
+  .about__card--tags ul li {
+    font-size: 0.49em;
+  }
+
+  .contact {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 1px;
+    background-image: url(./assets/contact_bkg_3_desktop_grouped.png);
+    background-size: 123vw;
+    background-position: bottom -10px left -85px;
+    overflow-x: hidden;
+  }
+
+  .contact__headline {
+    width: 50%;
+    font-size: 1em;
+    text-align: justify;
+    line-height: 25px;
+    margin-left: 25px;
+    margin-bottom: 85px;
+  }
+
+  .contact__container {
+    width: 59%;
+    margin-right: 8px;
+  }
+
+  .contact__container--btn {
+    margin-left: -212px;
+  }
+
+  .contact__mail {
+    display: none;
+  }
+}
