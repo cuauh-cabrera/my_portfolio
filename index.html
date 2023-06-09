@@ -233,10 +233,18 @@
                 please get in touch.</h2>
             <form class="contact__container" action="https://formspree.io/f/mbjezwnw" method="POST">
                 <ul>
-                    <li>
-                        <label for="name">Name:</label>
-                        <input type="text" name="user_name" id="name" placeholder="Full name" required maxlength="30">
-                    </li>
+                    <div class="contact__container--names">
+                        <li class="contact__container--names-full">
+                            <label for="name">Name:</label>
+                            <input type="text" name="user_name" id="name" placeholder="First name" required
+                                maxlength="30">
+                        </li>
+                        <li>
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last_name" id="last-name" placeholder="Last Name" required
+                                maxlength="30">
+                        </li>
+                    </div>
                     <li>
                         <label for="email">Email:</label>
                         <input type="email" name="user_email" id="email" placeholder="Email address" required>
