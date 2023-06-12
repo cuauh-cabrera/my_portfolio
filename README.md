@@ -65,7 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](Not Deployed...yet)
+- https://cuauh-cabrera.github.io/my_portfolio/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
