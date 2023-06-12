@@ -34,19 +34,30 @@ ol a {
   display: flex;
   flex-direction: row;
   position: fixed;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.98);
 }
 
-.header nav img {
+.header img {
   width: 80%;
   height: 55px;
-  margin-left: 65px;
+  margin-right: 10px;
+  order: 2;
+}
+
+.header__nav {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  order: 1;
+  visibility: hidden;
 }
 
 /* Headline styles */
 .headline-container {
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   background-image: url(./assets/background_image.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -59,26 +70,31 @@ ol a {
 }
 
 .headline {
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.headline__title {
-  width: 80vw;
+.headline__title--black {
+  width: 50%;
+  margin-top: 120px;
   text-align: center;
   line-height: 52px;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2em;
   font-style: normal;
-  margin-top: 75px;
-}
-
-.headline__title--black {
   color: rgba(23, 43, 77, 1);
 }
 
 .headline__title--green {
+  width: 60%;
+  margin-top: 5px;
+  text-align: center;
+  line-height: 52px;
+  font-weight: 700;
+  font-size: 2em;
+  font-style: normal;
   color: rgba(54, 179, 126, 1);
 }
 
@@ -88,7 +104,7 @@ ol a {
   text-align: center;
   line-height: 28px;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.2em;
   font-style: normal;
   color: rgba(23, 43, 77, 1);
 }
@@ -171,14 +187,11 @@ ol a {
   font-weight: 600;
   font-size: 1.5em;
   line-height: 32px;
-  color: rgba(58, 74, 66, 1);
+  color: #172b4d;
 }
 
 .projects__card--tags {
   margin-top: 16px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
 }
 
 .projects__card--tags ul {
@@ -186,6 +199,7 @@ ol a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .projects__card--tags ul li {
@@ -245,7 +259,7 @@ ol a {
 
 .about__headline {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   background-image: url(./assets/back_about_mobile.png);
   background-repeat: no-repeat;
   background-position: bottom;
@@ -288,12 +302,14 @@ ol a {
   width: 100%;
   display: grid;
   justify-items: center;
+  padding-bottom: 50px;
 }
 
 .about__card {
   width: 90%;
-  height: auto;
+  height: max-content;
   margin-top: 15px;
+  padding-bottom: 50px;
 }
 
 .about__card--item {
@@ -309,7 +325,7 @@ ol a {
 }
 
 .about__card--icon {
-  margin-top: 40px;
+  margin-top: 5px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -333,6 +349,7 @@ ol a {
 
 .about__card--tags ul {
   width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -391,15 +408,32 @@ ol a {
 }
 
 .contact__container ul {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.contact__container--names {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: -20px;
+  padding-right: -20px;
+}
+
+#last-name {
+  display: none;
+}
+
+.contact__container--names-full {
+  width: 100%;
+  padding-right: 0;
+}
+
 .contact__container ul li {
   width: 100%;
-  margin-top: 24px;
+  margin-top: 10px;
 }
 
 .contact__container li input {
@@ -409,7 +443,7 @@ ol a {
   padding-left: 15px;
   font-style: italic;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1em;
   line-height: 24px;
   color: rgba(107, 119, 140, 1);
 }
@@ -418,14 +452,19 @@ ol a {
   display: none;
 }
 
+#first-name {
+  display: none;
+}
+
 .contact__container ul li textarea {
   width: 100%;
   height: 114px;
   border: solid 1px rgba(96, 192, 149, 1);
   padding-left: 15px;
+  margin-top: 5px;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 1em;
   line-height: 24px;
   color: rgba(66, 82, 110, 1);
 }
@@ -439,14 +478,13 @@ ol a {
 
 .contact__container li button {
   border-radius: 4px;
-  margin: 0 auto;
 }
 
 .contact__mail {
   margin-top: 31px;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.2em;
   line-height: 32px;
   text-align: center;
   color: rgba(66, 82, 110, 1);
@@ -461,4 +499,739 @@ ol a {
   flex-direction: row;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 480 px */
+@media (min-width: 480px) {
+  .header {
+    width: 100%;
+    position: fixed;
+  }
+
+  .header img {
+    width: 70%;
+    margin-right: 20px;
+  }
+
+  .header__nav {
+    width: 20%;
+  }
+
+  .headline-container {
+    width: 100%;
+    height: 99vh;
+    margin: 0 auto;
+    background-size: auto;
+  }
+
+  .headline {
+    width: 90%;
+  }
+
+  .headline__title--black {
+    width: 39%;
+    margin-top: 130px;
+  }
+
+  .headline__text {
+    width: 75%;
+    margin-top: 25px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .projects {
+    margin-top: 25px;
+  }
+
+  .projects-container {
+    width: 90%;
+  }
+
+  .projects__card {
+    width: 85%;
+  }
+
+  .about {
+    margin-top: 25px;
+  }
+
+  .about__headline {
+    width: 90%;
+    background-size: auto;
+  }
+
+  .about__headline--text {
+    width: 63%;
+  }
+
+  .about__card-container {
+    width: 90%;
+    display: grid;
+    justify-items: center;
+  }
+
+  .about__card {
+    width: 85%;
+  }
+
+  .contact__headline {
+    width: 72%;
+  }
+
+  .contact__container {
+    width: 80%;
+    height: fit-content;
+    margin-top: 30px;
+  }
+
+  .contact__container--btn {
+    margin-bottom: 5px;
+  }
+
+  .contact__mail {
+    margin-top: 10px;
+  }
+
+  .footer {
+    margin-top: 10px;
+  }
+}
+
+/* 600 px */
+@media (min-width: 600px) {
+  .header {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .header img {
+    width: 60%;
+    height: 7.9vh;
+    margin-left: 30px;
+  }
+
+  .headline-container {
+    width: 100%;
+    height: 99vh;
+    margin-top: 0;
+    background-size: 70%;
+  }
+
+  .headline {
+    width: 95%;
+  }
+
+  .headline__title--black {
+    width: 29%;
+    margin-top: 130px;
+  }
+
+  .headline__title--green {
+    width: 40%;
+  }
+
+  .headline__text {
+    width: 50%;
+    margin-top: 25px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .projects {
+    margin-top: 25px;
+  }
+
+  .projects__title {
+    width: 50%;
+  }
+
+  .projects-container {
+    width: 95%;
+  }
+
+  .projects__card {
+    width: 75%;
+  }
+
+  .about {
+    margin-top: 25px;
+  }
+
+  .about__headline {
+    width: 95%;
+    background-size: auto;
+  }
+
+  .about__headline--text {
+    width: 55%;
+  }
+
+  .about__card-container {
+    width: 95%;
+    display: grid;
+    justify-items: center;
+  }
+
+  .about__card {
+    width: 75%;
+    height: max-content;
+    padding-bottom: 50px;
+  }
+
+  .about__headline--icon img {
+    margin-top: 3px;
+  }
+
+  .about__card--tags {
+    width: 80%;
+  }
+
+  .contact__headline {
+    width: 55%;
+  }
+
+  .contact__container {
+    width: 75%;
+    height: fit-content;
+    margin-top: 30px;
+  }
+
+  .contact__container ul {
+    width: 85%;
+  }
+
+  .contact__container--btn {
+    margin-bottom: 5px;
+  }
+
+  .contact__mail {
+    margin-top: 10px;
+  }
+
+  .footer {
+    margin-top: 10px;
+  }
+}
+
+/* 768 px */
+@media (min-width: 768px) {
+  .hero-container {
+    background-image: url(./assets/Header-llustration-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+
+  .header img {
+    display: none;
+  }
+
+  .header__nav {
+    width: 99%;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .header__nav ul {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .header__nav ul li {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 20px;
+    color: #172b4d;
+    padding: 5px;
+  }
+
+  .headline-container {
+    background-image: none;
+    height: 75vh;
+  }
+
+  .headline__title {
+    width: 50%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headline__title--black {
+    width: 100%;
+  }
+
+  .headline__title--green {
+    width: 80%;
+  }
+
+  .headline__text {
+    width: 65%;
+    margin-top: 15px;
+  }
+
+  .social-icons ul {
+    width: 30vw;
+    margin-top: 50px;
+  }
+
+  .projects {
+    margin-top: 10px;
+  }
+
+  .projects__indicator {
+    display: none;
+  }
+
+  .projects-container {
+    width: 95%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    column-gap: 10px;
+  }
+
+  .projects__card {
+    width: 100%;
+  }
+
+  .about {
+    height: max-content;
+  }
+
+  .about__headline {
+    width: 95%;
+    height: 50vh;
+    background-image: url(./assets/about_bkg_desktop.png);
+    background-size: contain;
+    background-position: center;
+    overflow-y: hidden;
+  }
+
+  .about__headline--text {
+    width: 67%;
+  }
+
+  .about__card-container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about__card {
+    width: 32%;
+    height: max-content;
+    padding-bottom: 50px;
+    overflow: hidden;
+  }
+
+  .about__card--item {
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .about__card--icon {
+    height: fit-content;
+    margin-top: 3px;
+  }
+
+  .about__card--icon img {
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .about__card--title {
+    margin-top: 5px;
+    font-size: 0.99em;
+  }
+
+  .about__card--tags {
+    width: 100%;
+  }
+
+  .about__card--tags ul {
+    width: 100%;
+    height: max-content;
+  }
+
+  .about__card--tags ul li {
+    font-size: 0.49em;
+  }
+
+  .contact {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 1px;
+    background-image: url(./assets/contact_bkg_3_desktop_grouped.png);
+    background-size: 124vw;
+    background-position: bottom -3px left -85px;
+    overflow-x: hidden;
+  }
+
+  .contact__headline {
+    width: 30%;
+    font-size: 1em;
+    text-align: justify;
+    line-height: 25px;
+    margin-left: 25px;
+    margin-bottom: 85px;
+  }
+
+  .contact__container {
+    width: 59%;
+    margin-right: 8px;
+  }
+
+  .contact__container ul {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  #last-name {
+    display: inline;
+  }
+
+  .contact__container--names {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  .contact__container--btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact__mail {
+    display: none;
+  }
+
+  .footer {
+    border-top: solid rgba(223, 225, 230, 1) 1px;
+    margin-top: 3px;
+    width: 100%;
+  }
+}
+
+/* 1024 px */
+@media (min-width: 1024px) {
+  .hero-container {
+    background-image: url(./assets/Header-llustration-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 83vmax;
+    background-position: top;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 5vh;
+    margin-top: -2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+
+  .header img {
+    display: none;
+  }
+
+  .header__nav {
+    width: 99%;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .header__nav ul {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .header__nav ul li {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 20px;
+    color: #344563;
+    padding: 5px;
+  }
+
+  .headline-container {
+    background-image: none;
+    height: 75vh;
+  }
+
+  .headline__title {
+    width: 40%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  .headline__text {
+    width: 54%;
+    margin-top: 15px;
+    font-size: 1em;
+  }
+
+  .social-icons ul {
+    width: 25vw;
+    margin-top: 5px;
+  }
+
+  .projects {
+    margin-top: 10px;
+  }
+
+  .projects__indicator {
+    display: none;
+  }
+
+  .projects-container {
+    width: 95%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    column-gap: 10px;
+  }
+
+  .projects__card {
+    width: 100%;
+  }
+
+  .about__headline {
+    width: 100%;
+    height: 50vh;
+    background-image: url(./assets/about_bkg_desktop.png);
+    background-size: contain;
+    background-position: center;
+    overflow-y: hidden;
+  }
+
+  .about__headline--text {
+    width: 60%;
+    font-size: 1.1em;
+  }
+
+  .about__card-container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about__card {
+    width: 32%;
+    overflow-x: hidden;
+  }
+
+  .about__card--item {
+    width: 100%;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .about__card--icon {
+    height: fit-content;
+    margin-top: 3px;
+  }
+
+  .about__card--icon img {
+    height: auto;
+    margin-top: 5px;
+  }
+
+  .about__card--title {
+    font-size: 0.99em;
+  }
+
+  .about__card--tags {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__card--tags ul {
+    width: 90%;
+  }
+
+  .about__card--tags ul li {
+    font-size: 0.59em;
+  }
+
+  .contact {
+    height: 85vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 1px;
+    background-image: url(./assets/contact_bkg_3_desktop_grouped.png);
+    background-size: 124vw;
+    background-position: bottom -1px left -125px;
+    overflow-x: hidden;
+  }
+
+  .contact__headline {
+    width: 35%;
+    font-size: 1.25em;
+    text-align: justify;
+    line-height: 25px;
+    margin-left: 25px;
+    margin-bottom: 200px;
+  }
+
+  .contact__container {
+    width: 69%;
+    margin-right: 8px;
+    margin-bottom: 150px;
+  }
+
+  .contact__container--btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .contact__container--btn li button {
+    margin: 0;
+  }
+
+  .contact__mail {
+    display: none;
+  }
+
+  .footer {
+    border-top: solid rgba(223, 225, 230, 1) 1px;
+    margin-top: 3px;
+    width: 100%;
+  }
+}
+
+/* 1200 px */
+@media (min-width: 1200px) {
+  .hero-container {
+    width: 100%;
+    height: 90vh;
+    overflow-x: hidden;
+  }
+
+  .projects {
+    height: max-content;
+    width: 100%;
+  }
+
+  .projects__card {
+    width: 90%;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .about__card {
+    width: 29%;
+    height: 50vh;
+    overflow: hidden;
+  }
+
+  .about__card--icon {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .about__card--icon img {
+    width: 140%;
+  }
+
+  .about__card--tags ul {
+    width: 85%;
+  }
+
+  .about__card--tags ul li {
+    font-size: 0.69em;
+  }
+
+  .contact {
+    width: 100%;
+    background-size: 115vw;
+    background-position: bottom -3px left -85px;
+    overflow: hidden;
+  }
+
+  .contact__headline {
+    font-size: 1.51em;
+  }
+
+  .contact__container {
+    width: 55%;
+    margin-right: 8px;
+    margin-bottom: 150px;
+  }
+
+  .contact__container--btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .footer {
+    border-top: solid rgba(223, 225, 230, 1) 1px;
+    margin-top: 3px;
+    width: 100%;
+  }
 }
