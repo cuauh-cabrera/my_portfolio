@@ -50,6 +50,7 @@
   <ul>
     <li><a href="https://html.spec.whatwg.org/">HTML</a></li>
     <li><a href="https://www.w3.org/Style/CSS/">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript ES6</a></li>
     <li><a href="https://www.figma.com/">Figma</a></li>
   </ul>
 </details>
