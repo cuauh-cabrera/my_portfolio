@@ -1117,7 +1117,7 @@ ol a {
     width: 100%;
     margin-top: 20px;
     margin-left: 0;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
