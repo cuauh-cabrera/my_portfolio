@@ -15,12 +15,18 @@
 <body>
     <div class="hero-container">
         <header class="header">
-            <img src="./assets/Toolbar - Dark - Compact.png" alt="">
+            <div class="top-bar">
+                <div class="icon-menu" id="icon-menu">
+                    <div class="icon-menu__bar"></div>
+                </div>
+            </div>
             <nav class="header__nav">
-                <ul>
-                    <li><a href="#projects">Portfolio</a></li>
-                    <li><a href="#about-me">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="menu" id="main-menu">
+                    <li class="menu__item--close" id="icon-close"><a href="#"><img src="./assets/close_Icon.png"
+                        alt=""></a></li>
+                    <li class="menu__item"><a href="#projects" class="menu__link">Portfolio</a></li>
+                    <li class="menu__item"><a href="#about-me" class="menu__link">About</a></li>
+                    <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -279,6 +285,7 @@
             </ul>
         </div>
     </footer>
+    <script src="./main.js"></script>
 </body>
 
 </html>
