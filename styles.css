@@ -30,7 +30,7 @@ ol a {
 
 .header {
   width: 100%;
-  height: 90vh;
+  height: 1vh;
   margin-bottom: 5px;
   margin-left: 0;
   margin-right: 0;
@@ -45,7 +45,7 @@ ol a {
 .header__nav {
   margin-top: 0;
   width: 100%;
-  height: 90vh;
+  height: 1vh;
   display: flex;
   flex-direction: row;
   margin-right: 0;
@@ -98,7 +98,7 @@ ol a {
 
 .menu {
   width: 100%;
-  height: 100vh;
+  height: 1000vh;
   background: rgba(255, 255, 255, 1);
   padding-left: 25px;
   padding-top: 50px;
@@ -291,6 +291,160 @@ ol a {
 
 .projects__card--text button {
   margin-top: 29px;
+}
+
+/* Project's modal window */
+.projects__modal--conatiner {
+  border-radius: 16px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 1);
+  width: 80%;
+  max-width: 80%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects__modal--conatiner.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.projects__modal--body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects__modal--hero {
+  border-radius: 8px;
+  margin-top: 8px;
+  width: 95%;
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: url(./assets/modal_hero_bkg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.close-modal {
+  width: 30%;
+  margin-top: 19px;
+  margin-right: -14px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.projects__modal--title {
+  margin-left: 7px;
+  margin-top: 8px;
+  width: 90%;
+  text-align: left;
+  align-self: flex-start;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.0rem;
+  line-height: 44px;
+  color: rgba(23, 43, 77, 1);
+}
+
+.projects__modal--tags {
+  width: 100%;
+  height: max-content;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects__modal--tags ul {
+  width: 95%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 10px;
+}
+
+.projects__modal--tags ul li {
+  width: auto;
+  height: 32px;
+  padding: 8px 12px;
+  background-color: rgba(235, 240, 238, 1);
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.65em;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: rgba(58, 74, 66, 1);
+  padding: 8px;
+}
+
+.projects__modal--text {
+  width: 95%;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  text-align: justify;
+  color: rgba(52, 69, 99, 1);
+}
+
+.projects__modal--actions {
+  margin-top: 10px;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 18px;
+}
+
+.projects__modal--actions button {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.projects__modal--actions button img {
+  width: 20%;
+  height: 40%;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* Button's styles */
@@ -645,6 +799,65 @@ ol a {
     width: 85%;
   }
 
+  /* Project's modal window */
+  .projects__modal--conatiner {
+    height: max-content;
+  }
+
+.projects__modal--body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects__modal--hero {
+  margin-top: 18px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.close-modal {
+  width: 30%;
+  margin-top: 5px;
+  margin-right: -20px;
+  font-size: 2rem;
+}
+
+.projects__modal--title {
+  margin-left: 10px;
+  margin-top: 8px;
+}
+
+.projects__modal--tags {
+  width: 95%;
+}
+
+.projects__modal--tags ul {
+  width: 95%;
+  margin-top: 5px;
+  margin-left: -15px;
+  gap: 15px;
+}
+
+.projects__modal--tags ul li {
+  width: auto;
+  height: 32px;
+  padding: 8px 12px;
+}
+
+.projects__modal--actions {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.projects__modal--actions button {
+  width: 45%;
+}
+
   .about {
     margin-top: 25px;
   }
@@ -766,6 +979,28 @@ ol a {
   .projects__card {
     width: 75%;
   }
+
+  /* Project's modal window */
+.projects__modal--body {
+  width: 95%;
+}
+
+.projects__modal--hero {
+  width: 95%;
+}
+
+.projects__modal--title {
+  margin-left:10px;
+}
+
+.projects__modal--tags ul {
+  width: 95%;
+  margin-left: -25px;
+}
+
+.projects__modal--actions button {
+  width: 45%;
+}
 
   .about {
     margin-top: 25px;
