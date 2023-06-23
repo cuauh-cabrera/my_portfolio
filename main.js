@@ -181,3 +181,7 @@ closeMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show')
 mainMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show'));
 mainMenu.addEventListener('click', () => { iconMenu.style.display = 'flex'; });
 closeMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show'));
+
+/////* Form validation *////
+
+/// Variables
