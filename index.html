@@ -153,8 +153,7 @@
                         <li class="contact__container--names-full">
                             <label for="name">Name:</label>
                             <input type="text" name="user_name" id="name" placeholder="First name" required
-                                maxlength="30" onkeyup="checkName()">
-                                <span id="name-error" class="inputs-error"></span>
+                                maxlength="30">
                         </li>
                         <li>
                             <label for="last-name">Last Name</label>
@@ -164,18 +163,15 @@
                     </div>
                     <li>
                         <label for="email">Email:</label>
-                        <input type="email" name="user_email" id="email" placeholder="Email address" required onkeyup="checkEmail()">
-                        <span id="email-error" class="inputs-error"></span>
+                        <input type="email" name="user_email" id="email" placeholder="Email address">
                     </li>
                     <li>
                         <label for="message">Message:</label>
                         <textarea name="user_message" id="message" cols="30" rows="10" maxlength="500"
-                            placeholder="Hey I'd like to connect to..." required onkeyup="checkText()"></textarea>
-                            <span id="message-error" ></span>
+                            placeholder="Hey I'd like to connect to..." required></textarea>
                     </li>
                     <li class="contact__container--btn">
-                        <button class="action-btn" onclick="return validateForm()">Get in touch</button>
-                        <span id="submit-error" class="form-error"></span>
+                        <button class="action-btn">Get in touch</button>
                     </li>
                 </ul>
             </form>

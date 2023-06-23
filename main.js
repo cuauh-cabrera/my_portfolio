@@ -184,4 +184,3 @@ closeMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show')
 
 /////* Form validation *////
 
-/// Variables
