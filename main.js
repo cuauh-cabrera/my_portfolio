@@ -184,3 +184,26 @@ closeMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show')
 
 /////* Form validation *////
 
+<<<<<<< HEAD
+=======
+/// Variables
+const errorName = document.getElementById ('error-name');
+const errorMail = document.getElementById ('error-email');
+const errorText = document.getElementById ('error-text');
+const errorSub = document.getElementById ('error-submit');
+
+/// Name validation function
+function checkName () {
+    const name = document.getElementById ('user-name').value;
+    if (name.length === 0) {
+        errorName.innerHTML = 'Please enter your name';
+        return false;
+    }
+    if (!name.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
+        errorName.innerHTML = 'Please enter your full name';
+        return false;
+    }
+    errorName.innerHTML = '<i class="bi bi-check-circle-fill"></i>';
+    return true;
+}
+>>>>>>> 14b8bb99557c107927549c3a4b0a6c8ad8ec4fcd
