@@ -318,7 +318,7 @@ ol a {
   background-color: rgba(255, 255, 255, 1);
   width: 80%;
   max-width: 80%;
-  height: 95vh;
+  height: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,6 +329,10 @@ ol a {
 }
 
 .projects__modal--body {
+  width: 90%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -337,7 +341,7 @@ ol a {
 .projects__modal--hero {
   border-radius: 8px;
   margin-top: 8px;
-  width: 95%;
+  width: 100%;
   height: 25vh;
   display: flex;
   flex-direction: row;
@@ -345,7 +349,7 @@ ol a {
   align-items: flex-start;
   background-image: url(./assets/modal_hero_bkg.png);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -432,12 +436,12 @@ ol a {
   width: 95%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   gap: 18px;
 }
 
 .projects__modal--actions button {
-  width: 50%;
+  width: 65%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -445,8 +449,8 @@ ol a {
 }
 
 .projects__modal--actions button img {
-  width: 20%;
-  height: 40%;
+  width: 13%;
+  height: auto;
   margin-top: 2px;
   margin-left: 10px;
 }
@@ -466,6 +470,7 @@ ol a {
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+  background-color: rgba(193, 199, 208, 1);
 }
 
 /* Button's styles */
