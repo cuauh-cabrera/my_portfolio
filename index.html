@@ -68,7 +68,7 @@
             <h2 class="projects__title">My Recent Works</h2>
             <hr class="projects__indicator">
             <div id="projects-container" class="projects-container">
-            
+
         </section>
         <!--About me section-->
         <section id="about-me" class="about">
@@ -147,31 +147,27 @@
         <section id="contact" class="contact">
             <h2 class="contact__headline">I'm always interested in hearing about new projects, so if you'd like to chat
                 please get in touch.</h2>
-            <form class="contact__container" action="https://formspree.io/f/mbjezwnw" method="POST">
+            <form class="contact__container" id="contact-form" action="https://formspree.io/f/mbjezwnw" method="POST">
                 <ul>
-                    <div class="contact__container--names">
-                        <li class="contact__container--names-full">
-                            <label for="name">Name:</label>
-                            <input type="text" name="user_name" id="name" placeholder="First name" required
-                                maxlength="30">
-                        </li>
-                        <li>
-                            <label for="last-name">Last Name</label>
-                            <input type="text" name="last_name" id="last-name" placeholder="Last Name" required
-                                maxlength="30">
-                        </li>
-                    </div>
+                    <li class="contact__container--names-full">
+                        <label for="name">Name:</label>
+                        <input type="text" name="user" id="name" placeholder="First name"  maxlength="30">
+                        <small id="name-error"></small>
+                    </li>
                     <li>
                         <label for="email">Email:</label>
-                        <input type="email" name="user_email" id="email" placeholder="Email address">
+                        <input type="email" name="email" id="email" placeholder="Email address" onclick="return checkEmail()">
+                        <small class="contact__container--email-error" id="email-error"></small>
                     </li>
                     <li>
                         <label for="message">Message:</label>
                         <textarea name="user_message" id="message" cols="30" rows="10" maxlength="500"
-                            placeholder="Hey I'd like to connect to..." required></textarea>
+                            placeholder="Hey I'd like to connect to..."></textarea>
+                            <small></small>
                     </li>
                     <li class="contact__container--btn">
-                        <button class="action-btn">Get in touch</button>
+                        <button type="submit" class="action-btn" id="button-form" onclick="return checkForm()">Get in touch</button>
+                        <small class="contact__container--submit-error" id="submit-error"></small>
                     </li>
                 </ul>
             </form>

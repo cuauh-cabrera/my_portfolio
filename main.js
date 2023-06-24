@@ -182,28 +182,37 @@ mainMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show'))
 mainMenu.addEventListener('click', () => { iconMenu.style.display = 'flex'; });
 closeMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show'));
 
-/////* Form validation *////
+/// //* Form validation *////
 
-<<<<<<< HEAD
-=======
-/// Variables
-const errorName = document.getElementById ('error-name');
-const errorMail = document.getElementById ('error-email');
-const errorText = document.getElementById ('error-text');
-const errorSub = document.getElementById ('error-submit');
+const emailError = document.getElementById('email-error');
+const formError = document.getElementById('submit-error');
+const validateForm = document.getElementById('button-form');
 
-/// Name validation function
-function checkName () {
-    const name = document.getElementById ('user-name').value;
-    if (name.length === 0) {
-        errorName.innerHTML = 'Please enter your name';
-        return false;
-    }
-    if (!name.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
-        errorName.innerHTML = 'Please enter your full name';
-        return false;
-    }
-    errorName.innerHTML = '<i class="bi bi-check-circle-fill"></i>';
-    return true;
+/// Email address validation
+function checkEmail() {
+  const email = document.getElementById('email').value;
+  if (email.length === 0) {
+    emailError.innerHTML = 'Please enter an email address';
+    return false;
+  }
+  if (!email.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/)) {
+    emailError.innerHTML = 'Email address should be in lower case';
+    return false;
+  }
+  emailError.innerHTML = '';
+  return true;
 }
->>>>>>> 14b8bb99557c107927549c3a4b0a6c8ad8ec4fcd
+
+/// Form submission validation
+function checkForm() {
+  if (!checkEmail()) {
+    formError.style.display = 'block';
+    formError.innerHTML = 'Please enter the correct information';
+    setTimeout(() => { formError.style.display = 'none'; }, 1000);
+    return false;
+  }
+  return checkForm;
+}
+
+/// Form validation
+validateForm.addEventListener('click', checkForm());
