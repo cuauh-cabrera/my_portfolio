@@ -181,3 +181,38 @@ closeMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show')
 mainMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show'));
 mainMenu.addEventListener('click', () => { iconMenu.style.display = 'flex'; });
 closeMenu.addEventListener('click', () => mainMenu.classList.toggle('menu-show'));
+
+/// //* Form validation *////
+
+const emailError = document.getElementById('email-error');
+const formError = document.getElementById('submit-error');
+const validateForm = document.getElementById('button-form');
+
+/// Email address validation
+function checkEmail() {
+  const email = document.getElementById('email').value;
+  if (email.length === 0) {
+    emailError.innerHTML = 'Please enter an email address';
+    return false;
+  }
+  if (!email.match(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/)) {
+    emailError.innerHTML = 'Email address should be in lower case';
+    return false;
+  }
+  emailError.innerHTML = '';
+  return false;
+}
+
+/// fForm submission validation
+function checkForm() {
+  if (!checkEmail()) {
+    formError.style.display = 'block';
+    formError.innerHTML = 'Please enter the correct information';
+    setTimeout(() => { formError.style.display = 'none'; }, 3000);
+    return false;
+  }
+  return checkForm;
+}
+
+/// Form validation
+validateForm.addEventListener('click', checkForm());
